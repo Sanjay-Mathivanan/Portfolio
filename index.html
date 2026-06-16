@@ -38,6 +38,9 @@
     <span class="loader-name">Sanjay Mathivanan</span>
   </div>
 
+  <!-- Toast Notification -->
+  <div id="toast" class="toast"></div>
+
   <!-- ═══════════════ SCROLL PROGRESS ═══════════════ -->
   <div id="scroll-progress"></div>
 
@@ -103,7 +106,8 @@
               aria-label="LinkedIn">
               <i class="ri-linkedin-box-fill"></i>
             </a>
-            <a href="mailto:sanjaisp7@gmail.com" aria-label="Email">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sanjaisp7@gmail.com" target="_blank" rel="noopener"
+              aria-label="Email">
               <i class="ri-mail-line"></i>
             </a>
             <a href="tel:+916380958246" aria-label="Phone">
@@ -173,7 +177,7 @@
             <div class="info-card">
               <div class="card-icon">🤖</div>
               <div class="card-title">AI Engineer</div>
-              <div class="card-desc">ML, Deep Learning, NLP, LLMs</div>
+              <div class="card-desc">ML, Deep Learning, NLP </div>
             </div>
             <div class="info-card">
               <div class="card-icon">🦾</div>
@@ -183,12 +187,12 @@
             <div class="info-card">
               <div class="card-icon">⚙️</div>
               <div class="card-title">Backend Dev</div>
-              <div class="card-desc">Flask, REST APIs, MongoDB</div>
+              <div class="card-desc">Java, Python, Flask, MongoDB</div>
             </div>
             <div class="info-card">
               <div class="card-icon">📡</div>
               <div class="card-title">IoT Developer</div>
-              <div class="card-desc">ESP32, Sensors, UART</div>
+              <div class="card-desc">ESP32, Sensors, Arduino</div>
             </div>
           </div>
         </div>
@@ -202,72 +206,90 @@
       <div class="section-header">
         <div class="section-label"><i class="ri-route-line"></i> Timeline</div>
         <h2 class="section-title reveal">My Journey</h2>
-        <p class="section-subtitle reveal">A roadmap of my learning and growth since 2023.</p>
+        <p class="section-subtitle reveal">A roadmap of my learning, growth, and milestones.</p>
       </div>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-year">2023</div>
-            <div class="timeline-text">Started B.Tech in Artificial Intelligence & Data Science</div>
+      <div class="journey-timeline">
+
+        <div class="journey-item journey-left reveal">
+          <div class="journey-card">
+            <span class="journey-year">2023</span>
+            <span class="journey-emoji">🎓</span>
+            <h4>Started B.Tech in AI & Data Science</h4>
+            <p>KGISL Institute of Technology, Coimbatore</p>
           </div>
+          <div class="journey-dot"></div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-year">2023</div>
-            <div class="timeline-text">Learned Python — first step into programming</div>
+
+        <div class="journey-item journey-right reveal">
+          <div class="journey-card">
+            <span class="journey-year">2024</span>
+            <span class="journey-emoji">🐍</span>
+            <h4>Learned Python & Core Programming</h4>
+            <p>Concepts, Data Structures </p>
           </div>
+          <div class="journey-dot"></div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-year">2023</div>
-            <div class="timeline-text">Learned Java — OOP, Collections, Multithreading</div>
+
+        <div class="journey-item journey-left reveal">
+          <div class="journey-card">
+            <span class="journey-year">2025</span>
+            <span class="journey-emoji">💼</span>
+            <h4>Full Stack Python with AI Intern</h4>
+            <p>Appin Technology · 1 Month · On-site</p>
           </div>
+          <div class="journey-dot"></div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-year">2024</div>
-            <div class="timeline-text">Started Flask Development — building backend applications</div>
+
+        <div class="journey-item journey-right reveal">
+          <div class="journey-card">
+            <span class="journey-year">2025</span>
+            <span class="journey-emoji">🛡️</span>
+            <h4>SOI – Cyber Security</h4>
+            <p>School of Innovation program at KGiSL</p>
           </div>
+          <div class="journey-dot"></div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-year">2024</div>
-            <div class="timeline-text">Built AI Applications — NLP, LLMs, intelligent agents</div>
+
+        <div class="journey-item journey-left reveal">
+          <div class="journey-card">
+            <span class="journey-year journey-year-active">2025 – Present</span>
+            <span class="journey-emoji">🔌</span>
+            <h4>SOI – Embedded Systems & IoT</h4>
+            <p>School of Innovation program at KGiSL</p>
           </div>
+          <div class="journey-dot journey-dot-active"></div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-year">2024</div>
-            <div class="timeline-text">Worked on Machine Learning — models, training, optimization</div>
+
+        <div class="journey-item journey-right reveal">
+          <div class="journey-card">
+            <span class="journey-year journey-year-active">2025 – Present</span>
+            <span class="journey-emoji">🤖</span>
+            <h4>Learned Robotics & ROS2</h4>
+            <p>ROS2, Gazebo, Navigation</p>
           </div>
+          <div class="journey-dot journey-dot-active"></div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-year">2025</div>
-            <div class="timeline-text">Started Robotics using ROS2 — simulation, navigation</div>
+
+        <div class="journey-item journey-left reveal">
+          <div class="journey-card">
+            <span class="journey-year">2026</span>
+            <span class="journey-emoji">🚀</span>
+            <h4>House of Metozord</h4>
+            <p>Community Member · 3 Months</p>
           </div>
+          <div class="journey-dot"></div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-year">2025</div>
-            <div class="timeline-text">Built IoT Projects — ESP32, sensors, cloud dashboards</div>
+
+        <div class="journey-item journey-right reveal">
+          <div class="journey-card">
+            <span class="journey-year journey-year-active">2026 – Present</span>
+            <span class="journey-emoji">☕</span>
+            <h4>Java Learning Journey</h4>
+            <p>Advanced Java · Spring Boot · Backend Development</p>
           </div>
+          <div class="journey-dot journey-dot-active"></div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-year">2026</div>
-            <div class="timeline-text">Working on Autonomous Driving Systems — V2V, swarm intelligence</div>
-          </div>
-        </div>
+
       </div>
     </div>
   </section>
@@ -281,130 +303,137 @@
         <p class="section-subtitle reveal">A selection of projects showcasing my skills across AI, Robotics, and
           Full-Stack development.</p>
       </div>
-      <div class="projects-grid">
-        <!-- Project 1 -->
-        <div class="project-card reveal">
-          <div class="project-image">
-            <img src="assets/images/project-autonomous.png" alt="Swarm Intelligence Autonomous Driving" />
-            <div class="project-overlay">
-              <a href="https://github.com/Sanjay-Mathivanan/Autonomous-Vehicles-with-V2V-Communication-for-Cooperative-Driving"
-                target="_blank" rel="noopener" class="btn btn-primary" style="padding:10px 18px;font-size:13px;">
-                <i class="ri-github-fill"></i> View Code
-              </a>
-            </div>
-          </div>
-          <div class="project-info">
-            <h3 class="project-name">Swarm Intelligence Based Autonomous Driving</h3>
-            <p class="project-desc">ROS2 autonomous vehicle system using swarm intelligence, V2V communication, Gazebo
-              simulation, edge AI, and cooperative driving.</p>
-            <div class="project-tags">
-              <span class="project-tag">ROS2</span>
-              <span class="project-tag">Python</span>
-              <span class="project-tag">Gazebo</span>
-              <span class="project-tag">RViz2</span>
-              <span class="project-tag">CARLA</span>
-              <span class="project-tag">IoT</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/Sanjay-Mathivanan/Autonomous-Vehicles-with-V2V-Communication-for-Cooperative-Driving"
-                target="_blank" rel="noopener" class="project-link">
-                <i class="ri-github-fill"></i> Source Code
-              </a>
-            </div>
-          </div>
-        </div>
+      <div class="projects-carousel-wrap">
+        <button class="carousel-arrow carousel-prev" aria-label="Previous"><i class="ri-arrow-left-s-line"></i></button>
+        <div class="projects-carousel" id="projects-carousel">
 
-        <!-- Project 2 -->
-        <div class="project-card reveal">
-          <div class="project-image">
-            <img src="assets/images/project-negotiation.png" alt="AI Negotiation Agent" />
-            <div class="project-overlay">
-              <a href="https://github.com/Sanjay-Mathivanan/AI-NEGOTIATION-AGENT" target="_blank" rel="noopener"
-                class="btn btn-primary" style="padding:10px 18px;font-size:13px;">
-                <i class="ri-github-fill"></i> View Code
-              </a>
+          <!-- Project 1 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img src="assets/images/project-autonomous.png" alt="Swarm Intelligence Autonomous Driving"
+                loading="lazy" />
+              <div class="project-overlay">
+                <a href="https://github.com/Sanjay-Mathivanan/Autonomous-Vehicles-with-V2V-Communication-for-Cooperative-Driving"
+                  target="_blank" rel="noopener" class="btn btn-primary" style="padding:10px 18px;font-size:13px;">
+                  <i class="ri-github-fill"></i> View Code
+                </a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-name">Swarm Intelligence Based Autonomous Driving</h3>
+              <p class="project-desc">ROS2 autonomous vehicle system using swarm intelligence, V2V communication, Gazebo
+                simulation, edge AI, and cooperative driving.</p>
+              <div class="project-tags">
+                <span class="project-tag">ROS2</span>
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Gazebo</span>
+                <span class="project-tag">RViz2</span>
+                <span class="project-tag">CARLA</span>
+                <span class="project-tag">IoT</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Sanjay-Mathivanan/Autonomous-Vehicles-with-V2V-Communication-for-Cooperative-Driving"
+                  target="_blank" rel="noopener" class="project-link">
+                  <i class="ri-github-fill"></i> Source Code
+                </a>
+              </div>
             </div>
           </div>
-          <div class="project-info">
-            <h3 class="project-name">AI Negotiation Agent</h3>
-            <p class="project-desc">Python AI agent for buyer–seller negotiations using LLMs, NLP, and decision
-              strategies for intelligent deal-making.</p>
-            <div class="project-tags">
-              <span class="project-tag">Python</span>
-              <span class="project-tag">LLM</span>
-              <span class="project-tag">NLP</span>
-              <span class="project-tag">Machine Learning</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/Sanjay-Mathivanan/AI-NEGOTIATION-AGENT" target="_blank" rel="noopener"
-                class="project-link">
-                <i class="ri-github-fill"></i> Source Code
-              </a>
-            </div>
-          </div>
-        </div>
 
-        <!-- Project 3 -->
-        <div class="project-card reveal">
-          <div class="project-image">
-            <img src="assets/images/project-summarizer.png" alt="AI Note Summarization" />
-            <div class="project-overlay">
-              <a href="https://github.com/Sanjay-Mathivanan/NoteSummarizerAI" target="_blank" rel="noopener"
-                class="btn btn-primary" style="padding:10px 18px;font-size:13px;">
-                <i class="ri-github-fill"></i> View Code
-              </a>
+          <!-- Project 2 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img src="assets/images/project-negotiation.png" alt="AI Negotiation Agent" loading="lazy" />
+              <div class="project-overlay">
+                <a href="https://github.com/Sanjay-Mathivanan/AI-NEGOTIATION-AGENT" target="_blank" rel="noopener"
+                  class="btn btn-primary" style="padding:10px 18px;font-size:13px;">
+                  <i class="ri-github-fill"></i> View Code
+                </a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-name">AI Negotiation Agent</h3>
+              <p class="project-desc">Python AI agent for buyer–seller negotiations using LLMs, NLP, and decision
+                strategies for intelligent deal-making.</p>
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">LLM</span>
+                <span class="project-tag">NLP</span>
+                <span class="project-tag">Machine Learning</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Sanjay-Mathivanan/AI-NEGOTIATION-AGENT" target="_blank" rel="noopener"
+                  class="project-link">
+                  <i class="ri-github-fill"></i> Source Code
+                </a>
+              </div>
             </div>
           </div>
-          <div class="project-info">
-            <h3 class="project-name">AI Note Summarization Web App</h3>
-            <p class="project-desc">Full-stack Flask application using HuggingFace BART model for intelligent note
-              summarization with a clean UI.</p>
-            <div class="project-tags">
-              <span class="project-tag">Python</span>
-              <span class="project-tag">Flask</span>
-              <span class="project-tag">MongoDB</span>
-              <span class="project-tag">BART</span>
-              <span class="project-tag">HTML/CSS</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/Sanjay-Mathivanan/NoteSummarizerAI" target="_blank" rel="noopener"
-                class="project-link">
-                <i class="ri-github-fill"></i> Source Code
-              </a>
-            </div>
-          </div>
-        </div>
 
-        <!-- Project 4 -->
-        <div class="project-card reveal">
-          <div class="project-image">
-            <img src="assets/images/project-waste.png" alt="Smart Waste Segregation" />
-            <div class="project-overlay">
-              <a href="https://github.com/Sanjay-Mathivanan/SMART_WASTE_SEGREGATION" target="_blank" rel="noopener"
-                class="btn btn-primary" style="padding:10px 18px;font-size:13px;">
-                <i class="ri-github-fill"></i> View Code
-              </a>
+          <!-- Project 3 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img src="assets/images/project-summarizer.png" alt="AI Note Summarization" loading="lazy" />
+              <div class="project-overlay">
+                <a href="https://github.com/Sanjay-Mathivanan/NoteSummarizerAI" target="_blank" rel="noopener"
+                  class="btn btn-primary" style="padding:10px 18px;font-size:13px;">
+                  <i class="ri-github-fill"></i> View Code
+                </a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-name">AI Note Summarization Web App</h3>
+              <p class="project-desc">Full-stack Flask application using HuggingFace BART model for intelligent note
+                summarization with a clean UI.</p>
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Flask</span>
+                <span class="project-tag">MongoDB</span>
+                <span class="project-tag">BART</span>
+                <span class="project-tag">HTML/CSS</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Sanjay-Mathivanan/NoteSummarizerAI" target="_blank" rel="noopener"
+                  class="project-link">
+                  <i class="ri-github-fill"></i> Source Code
+                </a>
+              </div>
             </div>
           </div>
-          <div class="project-info">
-            <h3 class="project-name">Smart Waste Segregation</h3>
-            <p class="project-desc">AI-powered waste segregation system using YOLO object detection with IoT automation
-              for real-time waste identification and sorting.</p>
-            <div class="project-tags">
-              <span class="project-tag">YOLO</span>
-              <span class="project-tag">ESP32</span>
-              <span class="project-tag">Python</span>
-              <span class="project-tag">IoT</span>
-              <span class="project-tag">Cloud</span>
+
+          <!-- Project 4 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img src="assets/images/project-waste.png" alt="Smart Waste Segregation" loading="lazy" />
+              <div class="project-overlay">
+                <a href="https://github.com/Sanjay-Mathivanan/SMART_WASTE_SEGREGATION" target="_blank" rel="noopener"
+                  class="btn btn-primary" style="padding:10px 18px;font-size:13px;">
+                  <i class="ri-github-fill"></i> View Code
+                </a>
+              </div>
             </div>
-            <div class="project-links">
-              <a href="https://github.com/Sanjay-Mathivanan/SMART_WASTE_SEGREGATION" target="_blank" rel="noopener"
-                class="project-link">
-                <i class="ri-github-fill"></i> Source Code
-              </a>
+            <div class="project-info">
+              <h3 class="project-name">Smart Waste Segregation</h3>
+              <p class="project-desc">AI-powered waste segregation system using YOLO object detection with IoT
+                automation for real-time waste identification and sorting.</p>
+              <div class="project-tags">
+                <span class="project-tag">YOLO</span>
+                <span class="project-tag">ESP32</span>
+                <span class="project-tag">Python</span>
+                <span class="project-tag">IoT</span>
+                <span class="project-tag">Cloud</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Sanjay-Mathivanan/SMART_WASTE_SEGREGATION" target="_blank" rel="noopener"
+                  class="project-link">
+                  <i class="ri-github-fill"></i> Source Code
+                </a>
+              </div>
             </div>
           </div>
+
         </div>
+        <button class="carousel-arrow carousel-next" aria-label="Next"><i class="ri-arrow-right-s-line"></i></button>
       </div>
     </div>
   </section>
@@ -556,52 +585,95 @@
       <div class="section-header">
         <div class="section-label"><i class="ri-briefcase-4-line"></i> Experience</div>
         <h2 class="section-title reveal">Work Experience</h2>
-        <p class="section-subtitle reveal">Hands-on experience building real-world applications.</p>
+        <p class="section-subtitle reveal">My professional journey and work experience in building impactful solutions.
+        </p>
       </div>
-      <div class="experience-list">
-        <div class="experience-card reveal">
-          <div class="experience-header">
-            <div>
-              <div class="experience-role">Full Stack Python with AI Intern</div>
+      <div class="experience-grid reveal">
+        <!-- Card 1 -->
+        <div class="experience-card">
+          <div class="experience-top">
+            <div class="experience-icon-box">
+              <i class="ri-building-4-line"></i>
+            </div>
+            <div class="experience-header-text">
+              <h3 class="experience-role">Full Stack Python with AI Intern</h3>
               <div class="experience-company">Appin Technology</div>
+              <div class="experience-duration">
+                <i class="ri-calendar-line"></i> Jun 2025 - Jul 2025 · 2 mos
+              </div>
             </div>
-            <span class="experience-badge">Internship</span>
           </div>
+          <hr class="experience-divider" />
           <ul class="experience-points">
-            <li>Developed AI-powered note summarization application</li>
-            <li>Worked on Flask backend architecture and routing</li>
-            <li>Integrated AI models (HuggingFace BART) for text processing</li>
-            <li>Optimized APIs for better performance and response times</li>
+            <li>Developed an AI-powered Note Summarization Web Application.</li>
+            <li>Built backend features using Flask.</li>
+            <li>Integrated Hugging Face BART for AI-powered text summarization.</li>
+            <li>Optimized APIs for better performance and response times.</li>
           </ul>
-          <div class="experience-tags">
-            <span class="project-tag">Python</span>
-            <span class="project-tag">Flask</span>
-            <span class="project-tag">AI</span>
-            <span class="project-tag">MongoDB</span>
+          <div class="experience-tech-section">
+            <h4 class="experience-tech-title">Tech Stack</h4>
+            <div class="experience-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Flask</span>
+              <span class="project-tag">AI</span>
+              <span class="project-tag">MongoDB</span>
+            </div>
+          </div>
+          <div class="experience-buttons">
+            <a href="https://github.com/Sanjay-Mathivanan/NoteSummarizerAI" target="_blank" rel="noopener"
+              class="experience-btn">
+              <i class="ri-github-fill"></i> View on GitHub
+            </a>
+            <a href="https://drive.google.com/file/d/16zodGKzQAvDatqsZaEXvCBNjRD3H223D/view" target="_blank"
+              rel="noopener" class="experience-btn">
+              <i class="ri-external-link-line"></i> View Certificate
+            </a>
           </div>
         </div>
-        <div class="experience-card reveal">
-          <div class="experience-header">
-            <div>
-              <div class="experience-role">ROS2 Self-Learning Journey</div>
-              <div class="experience-company">Self-Directed</div>
+
+        <!-- Card 2 -->
+        <div class="experience-card">
+          <div class="experience-top">
+            <div class="experience-icon-box">
+              <i class="ri-group-line"></i>
             </div>
-            <span class="experience-badge">Self-Learning</span>
+            <div class="experience-header-text">
+              <h3 class="experience-role">Community Member</h3>
+              <div class="experience-company">House of Metozord</div>
+              <div class="experience-duration">
+                <i class="ri-calendar-line"></i> Dec 2025 - Feb 2026 · 3 mos
+              </div>
+            </div>
           </div>
+          <hr class="experience-divider" />
           <ul class="experience-points">
-            <li>Robot Simulation with Gazebo and RViz2 environments</li>
-            <li>Built Python Nodes for robot control and communication</li>
-            <li>Implemented navigation stacks and path planning</li>
-            <li>Developed V2V communication protocols for autonomous vehicles</li>
+            <li>Collaborated on real-world software projects.</li>
+            <li>Developed the Smart Waste Segregation project.</li>
+            <li>Participated in multiple hackathons.</li>
+            <li>Explored and learned emerging technologies with the community.</li>
           </ul>
-          <div class="experience-tags">
-            <span class="project-tag">ROS2</span>
-            <span class="project-tag">Gazebo</span>
-            <span class="project-tag">RViz2</span>
-            <span class="project-tag">Python</span>
+          <div class="experience-tech-section">
+            <h4 class="experience-tech-title">Focus Areas</h4>
+            <div class="experience-tags">
+              <span class="project-tag">AI</span>
+              <span class="project-tag">IoT</span>
+              <span class="project-tag">Team Collaboration</span>
+              <span class="project-tag">Hackathons</span>
+            </div>
+          </div>
+          <div class="experience-buttons">
+            <a href="https://github.com/Sanjay-Mathivanan/SMART_WASTE_SEGREGATION" target="_blank" rel="noopener"
+              class="experience-btn">
+              <i class="ri-github-fill"></i> View on GitHub
+            </a>
+            <a href="https://drive.google.com/file/d/1KcW_P9fMv2h_7bahe6-PvzwikTlvCYOS/view" target="_blank"
+              rel="noopener" class="experience-btn">
+              <i class="ri-external-link-line"></i> View Certificate
+            </a>
           </div>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -612,13 +684,30 @@
         <div class="section-label"><i class="ri-graduation-cap-line"></i> Education</div>
         <h2 class="section-title reveal">Education</h2>
       </div>
-      <div class="education-card reveal">
-        <div class="education-icon">🎓</div>
-        <h3 class="education-degree">B.Tech</h3>
-        <p class="education-field">Artificial Intelligence & Data Science</p>
-        <p class="education-institute">KGISL Institute of Technology, Coimbatore</p>
-        <div class="education-cgpa">
-          <span>CGPA</span> 8.47
+      <div class="edu-grid">
+        <div class="edu-card reveal">
+          <div class="edu-top">
+            <div class="edu-icon-wrap"><i class="ri-graduation-cap-fill"></i></div>
+            <span class="edu-year">2023 – Present</span>
+          </div>
+          <h3 class="edu-degree">B.Tech – AI & Data Science</h3>
+          <p class="edu-institute"><i class="ri-building-2-line"></i> KGISL Institute of Technology, Coimbatore</p>
+          <div class="edu-score">
+            <span class="edu-score-label">CGPA</span>
+            <span class="edu-score-value">8.47</span>
+          </div>
+        </div>
+        <div class="edu-card reveal">
+          <div class="edu-top">
+            <div class="edu-icon-wrap edu-icon-secondary"><i class="ri-school-fill"></i></div>
+            <span class="edu-year">2021 – 2023</span>
+          </div>
+          <h3 class="edu-degree">HSC – Computer Science</h3>
+          <p class="edu-institute"><i class="ri-building-2-line"></i> Govt. Boys HSS, Modakurichi, Erode</p>
+          <div class="edu-score">
+            <span class="edu-score-label">Percentage</span>
+            <span class="edu-score-value">79%</span>
+          </div>
         </div>
       </div>
     </div>
@@ -713,82 +802,32 @@
     </div>
   </section>
 
-  <!-- ═══════════════ CURRENTLY LEARNING ═══════════════ -->
-  <section class="section" id="learning" style="background:var(--bg-secondary)">
-    <div class="container">
-      <div class="learning-content reveal">
-        <div class="learning-card">
-          <div class="learning-emoji">☕</div>
-          <div class="learning-label">Currently Learning</div>
-          <div class="learning-name">Java</div>
-          <p class="learning-detail">Deepening my expertise in Java — OOP, Collections, Multithreading, JDBC, and
-            advanced concepts.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ═══════════════ GITHUB ═══════════════ -->
-  <section class="section github-section" id="github">
+  <!-- ═══════════════ CODING PROFILES ═══════════════ -->
+  <section class="section" id="coding-profiles">
     <div class="container">
       <div class="section-header">
-        <div class="section-label"><i class="ri-github-fill"></i> Open Source</div>
-        <h2 class="section-title reveal">GitHub Activity</h2>
-        <p class="section-subtitle reveal">My open-source contributions and repositories.</p>
+        <div class="section-label"><i class="ri-code-box-line"></i> Profiles</div>
+        <h2 class="section-title reveal">Coding Profiles</h2>
+        <p class="section-subtitle reveal">Competitive programming and problem-solving platforms.</p>
       </div>
-      <div class="github-stats reveal">
-        <div class="stat-card">
-          <div class="stat-value" id="gh-repos" data-count="0">—</div>
-          <div class="stat-label">Public Repos</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-value" id="gh-stars" data-count="0">—</div>
-          <div class="stat-label">Total Stars</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-value" id="gh-followers" data-count="0">—</div>
-          <div class="stat-label">Followers</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-value" id="gh-following" data-count="0">—</div>
-          <div class="stat-label">Following</div>
-        </div>
-      </div>
-      <div class="github-cards" id="github-repos">
-        <!-- Populated by JavaScript via GitHub API -->
-      </div>
-      <div style="text-align:center;margin-top:32px;" class="reveal">
-        <a href="https://github.com/Sanjay-Mathivanan" target="_blank" rel="noopener" class="btn btn-secondary">
-          <i class="ri-github-fill"></i> View Full Profile
+      <div class="coding-profiles reveal">
+        <a href="https://leetcode.com/u/zMP08wtaf9/" target="_blank" rel="noopener" class="coding-profile-card">
+          <div class="profile-icon">⚡</div>
+          <div class="profile-name">LeetCode</div>
+          <div class="profile-stat">98 Submissions · 76.5% Acceptance</div>
         </a>
-      </div>
-
-      <!-- Coding Profiles -->
-      <div style="margin-top:64px;">
-        <h3
-          style="text-align:center;font-family:var(--font-heading);font-size:20px;font-weight:700;color:var(--text);margin-bottom:8px;"
-          class="reveal">Coding Profiles</h3>
-        <p style="text-align:center;font-size:14px;color:var(--text-secondary);margin-bottom:24px;" class="reveal">
-          Competitive programming and problem-solving platforms.</p>
-        <div class="coding-profiles reveal">
-          <a href="https://leetcode.com/u/zMP08wtaf9/" target="_blank" rel="noopener" class="coding-profile-card">
-            <div class="profile-icon">⚡</div>
-            <div class="profile-name">LeetCode</div>
-            <div class="profile-stat">98 Submissions · 76.5% Acceptance</div>
-          </a>
-          <a href="https://www.hackerrank.com/profile/sanjaisp7" target="_blank" rel="noopener"
-            class="coding-profile-card">
-            <div class="profile-icon">💚</div>
-            <div class="profile-name">HackerRank</div>
-            <div class="profile-stat">11,944 Hackos</div>
-          </a>
-          <a href="https://www.codechef.com/users/sanjay_m06" target="_blank" rel="noopener"
-            class="coding-profile-card">
-            <div class="profile-icon">👨‍🍳</div>
-            <div class="profile-name">CodeChef</div>
-            <div class="profile-stat">Java Skill Test — 97%</div>
-          </a>
-        </div>
+        <a href="https://www.hackerrank.com/profile/sanjaisp7" target="_blank" rel="noopener"
+          class="coding-profile-card">
+          <div class="profile-icon">💚</div>
+          <div class="profile-name">HackerRank</div>
+          <div class="profile-stat">11,944 Hackos</div>
+        </a>
+        <a href="https://www.codechef.com/users/sanjay_m06" target="_blank" rel="noopener" class="coding-profile-card">
+          <div class="profile-icon">👨‍🍳</div>
+          <div class="profile-name">CodeChef</div>
+          <div class="profile-stat">Java Skill Test — 97%</div>
+        </a>
       </div>
     </div>
   </section>
@@ -805,10 +844,9 @@
       <div class="contact-grid">
         <div class="contact-info reveal">
           <h3>Contact Information</h3>
-          <p>Feel free to reach out via email or connect with me on social platforms. I'm always open to discussing new
-            projects and opportunities.</p>
           <div class="contact-details">
-            <a href="mailto:sanjaisp7@gmail.com" class="contact-item">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sanjaisp7@gmail.com" target="_blank" rel="noopener"
+              class="contact-item">
               <div class="contact-item-icon"><i class="ri-mail-line"></i></div>
               <span>sanjaisp7@gmail.com</span>
             </a>
@@ -820,21 +858,22 @@
               <div class="contact-item-icon"><i class="ri-map-pin-line"></i></div>
               <span>Coimbatore, India</span>
             </div>
-          </div>
-          <div class="contact-socials">
-            <a href="https://github.com/Sanjay-Mathivanan" target="_blank" rel="noopener" aria-label="GitHub"><i
-                class="ri-github-fill"></i></a>
+            <a href="https://github.com/Sanjay-Mathivanan" target="_blank" rel="noopener" class="contact-item">
+              <div class="contact-item-icon"><i class="ri-github-fill"></i></div>
+              <span>Sanjay-Mathivanan</span>
+            </a>
             <a href="https://www.linkedin.com/in/sanjay-mathivanan/" target="_blank" rel="noopener"
-              aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a>
-            <a href="https://leetcode.com/u/zMP08wtaf9/" target="_blank" rel="noopener" aria-label="LeetCode"><i
-                class="ri-code-box-line"></i></a>
-            <a href="https://www.hackerrank.com/profile/sanjaisp7" target="_blank" rel="noopener"
-              aria-label="HackerRank"><i class="ri-terminal-box-line"></i></a>
-            <a href="mailto:sanjaisp7@gmail.com" aria-label="Email"><i class="ri-mail-line"></i></a>
+              class="contact-item">
+              <div class="contact-item-icon"><i class="ri-linkedin-box-fill"></i></div>
+              <span>sanjay-mathivanan</span>
+            </a>
           </div>
         </div>
         <div class="contact-form-wrapper reveal">
           <form id="contact-form">
+            <input type="hidden" name="_subject" value="Portfolio Contact Form" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
             <div class="form-group">
               <label for="name">Your Name</label>
               <input type="text" id="name" name="name" placeholder="John Doe" required />
@@ -848,8 +887,8 @@
               <textarea id="message" name="message" placeholder="Tell me about your project or idea..."
                 required></textarea>
             </div>
-            <button type="submit" class="btn-submit">
-              <i class="ri-send-plane-fill"></i> Send Message
+            <button type="submit" class="btn-submit" id="submit-btn">
+              <i class="ri-send-plane-fill"></i> <span>Send Message</span>
             </button>
           </form>
         </div>

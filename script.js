@@ -185,102 +185,92 @@ document.addEventListener('DOMContentLoaded', () => {
   revealElements.forEach(el => revealObserver.observe(el));
 
   // ──────────────────────────────────────
-  // GitHub API Integration
+  // Toast Notification Helper
   // ──────────────────────────────────────
-  const GITHUB_USERNAME = 'Sanjay-Mathivanan';
-
-  async function fetchGitHubData() {
-    try {
-      // Fetch user data
-      const userRes = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}`);
-      const userData = await userRes.json();
-
-      // Update stats
-      const reposCount = document.getElementById('gh-repos');
-      const followersCount = document.getElementById('gh-followers');
-      const followingCount = document.getElementById('gh-following');
-
-      if (reposCount) reposCount.textContent = userData.public_repos || '—';
-      if (followersCount) followersCount.textContent = userData.followers || '—';
-      if (followingCount) followingCount.textContent = userData.following || '—';
-
-      // Fetch repos
-      const reposRes = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=6`);
-      const repos = await reposRes.json();
-
-      // Calculate total stars
-      const totalStars = repos.reduce((sum, repo) => sum + (repo.stargazers_count || 0), 0);
-      const starsEl = document.getElementById('gh-stars');
-      if (starsEl) starsEl.textContent = totalStars;
-
-      // Render repos
-      const reposContainer = document.getElementById('github-repos');
-      if (reposContainer && Array.isArray(repos)) {
-        reposContainer.innerHTML = repos.slice(0, 6).map(repo => `
-          <a href="${repo.html_url}" target="_blank" rel="noopener" class="github-repo-card">
-            <div class="repo-name">
-              <i class="ri-git-repository-line"></i>
-              ${repo.name}
-            </div>
-            <p class="repo-desc">${repo.description || 'No description available.'}</p>
-            <div class="repo-meta">
-              ${repo.language ? `<span><span class="lang-dot" style="background:${getLanguageColor(repo.language)}"></span>${repo.language}</span>` : ''}
-              <span><i class="ri-star-line"></i> ${repo.stargazers_count}</span>
-              <span><i class="ri-git-branch-line"></i> ${repo.forks_count}</span>
-            </div>
-          </a>
-        `).join('');
-      }
-    } catch (error) {
-      console.log('GitHub API rate limited or unavailable:', error);
+  function showToast(message) {
+    const toast = document.getElementById('toast');
+    if (toast) {
+      toast.textContent = message;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
     }
   }
 
-  function getLanguageColor(lang) {
-    const colors = {
-      'Python': '#3572A5',
-      'Java': '#b07219',
-      'JavaScript': '#f1e05a',
-      'HTML': '#e34c26',
-      'CSS': '#563d7c',
-      'C': '#555555',
-      'C++': '#f34b7d',
-      'TypeScript': '#2b7489',
-      'Shell': '#89e051',
-      'Jupyter Notebook': '#DA5B0B'
-    };
-    return colors[lang] || '#8b8b8b';
+  // ──────────────────────────────────────
+  // Projects Carousel Scroll Logic
+  // ──────────────────────────────────────
+  const carousel = document.getElementById('projects-carousel');
+  const prevBtn = document.querySelector('.carousel-prev');
+  const nextBtn = document.querySelector('.carousel-next');
+
+  if (carousel) {
+    // Mouse wheel horizontal scrolling
+    carousel.addEventListener('wheel', (e) => {
+      if (e.deltaY !== 0) {
+        e.preventDefault();
+        carousel.scrollLeft += e.deltaY;
+      }
+    }, { passive: false });
+
+    // Arrow navigation buttons
+    if (prevBtn && nextBtn) {
+      prevBtn.addEventListener('click', () => {
+        const cardWidth = carousel.querySelector('.project-card').offsetWidth;
+        carousel.scrollBy({ left: -(cardWidth + 24), behavior: 'smooth' });
+      });
+
+      nextBtn.addEventListener('click', () => {
+        const cardWidth = carousel.querySelector('.project-card').offsetWidth;
+        carousel.scrollBy({ left: cardWidth + 24, behavior: 'smooth' });
+      });
+    }
   }
 
-  fetchGitHubData();
-
   // ──────────────────────────────────────
-  // Contact Form
+  // Contact FormSubmit AJAX
   // ──────────────────────────────────────
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const formData = new FormData(contactForm);
-      const name = formData.get('name');
-      const email = formData.get('email');
-      const message = formData.get('message');
 
-      // Mailto fallback
-      const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
-      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-      window.location.href = `mailto:sanjaisp7@gmail.com?subject=${subject}&body=${body}`;
-
-      // Visual feedback
       const btn = contactForm.querySelector('.btn-submit');
-      const originalText = btn.textContent;
-      btn.textContent = 'Opening Email Client...';
-      btn.style.background = '#10B981';
-      setTimeout(() => {
-        btn.textContent = originalText;
-        btn.style.background = '';
-        contactForm.reset();
-      }, 3000);
+      const btnText = btn.querySelector('span') || btn;
+      const originalText = btnText.innerHTML;
+
+      // Disable button and show spinner
+      btn.disabled = true;
+      btnText.innerHTML = '<span class="loader-spinner" style="width:16px;height:16px;border-width:2px;display:inline-block;vertical-align:middle;margin-right:8px;"></span> Sending...';
+
+      const formData = new FormData(contactForm);
+
+      fetch('https://formsubmit.co/ajax/sanjaisp7@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(Object.fromEntries(formData))
+      })
+      .then(response => {
+        if (response.ok) {
+          showToast('Message sent successfully!');
+          contactForm.reset();
+        } else {
+          throw new Error('Server returned an error');
+        }
+      })
+      .catch(error => {
+        console.error('Submission error:', error);
+        showToast('Something went wrong. Please try again.');
+      })
+      .finally(() => {
+        // Re-enable button
+        btn.disabled = false;
+        btnText.innerHTML = originalText;
+      });
     });
   }
 
