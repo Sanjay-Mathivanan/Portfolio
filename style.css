@@ -1625,6 +1625,155 @@ input, textarea { font-family: inherit; }
   gap: 10px;
 }
 
+/* === Certifications Summary === */
+.cert-summary-container {
+  max-width: 960px;
+  margin: 48px auto 0 auto;
+}
+
+.cert-summary-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), border-color 0.3s var(--ease);
+}
+
+.cert-summary-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+}
+
+.cert-summary-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 16px;
+}
+
+.cert-summary-icon {
+  font-size: 24px;
+  color: var(--primary);
+}
+
+.cert-summary-title {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.cert-summary-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.cert-stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+
+.cert-stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.cert-stat-num {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1;
+  font-family: var(--font-heading);
+}
+
+.cert-stat-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  margin-top: 4px;
+}
+
+.cert-stat-divider {
+  height: 1px;
+  background: var(--border);
+  width: 100%;
+}
+
+.cert-stat-sub-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cert-stat-sub {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.cert-sub-num {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  font-family: var(--font-heading);
+}
+
+.cert-sub-label {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.cert-domains {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cert-domains-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cert-domain-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cert-domain-tag {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--primary);
+  background: var(--primary-light);
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(37, 99, 235, 0.1);
+  transition: all 0.3s var(--ease);
+}
+
+.cert-domain-tag:hover {
+  transform: translateY(-2px);
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.15);
+}
+
+@media (max-width: 768px) {
+  .cert-summary-content {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
 /* === Achievements === */
 .achievements-grid {
   display: grid;
