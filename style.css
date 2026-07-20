@@ -1177,30 +1177,54 @@ input, textarea { font-family: inherit; }
   margin-bottom: 16px;
 }
 
-.knowledge-link,
-.knowledge-links {
-  margin-top: auto;
-}
-
 .knowledge-links {
   display: flex;
   align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: auto;
+  width: 100%;
 }
 
 .knowledge-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
+  flex: 1;
+  height: 42px;
+  border-radius: 10px;
   font-size: 13px;
   font-weight: 600;
-  color: var(--primary);
-  transition: gap 0.3s var(--ease);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid var(--border);
+  transition: all 0.3s var(--ease);
+  white-space: nowrap;
+  background: var(--bg-card);
+  color: var(--text);
+  margin-top: auto;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .knowledge-link:hover {
-  gap: 10px;
+  color: var(--primary);
+  border-color: var(--primary);
+  background: var(--primary-light);
+  transform: translateY(-2px);
+}
+
+.knowledge-link.primary-btn {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+}
+
+.knowledge-link.primary-btn:hover {
+  background: var(--primary-hover);
+  color: #ffffff;
+  border-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
 }
 
 /* === Skills === */
